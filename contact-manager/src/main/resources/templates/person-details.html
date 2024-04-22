@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Person Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #add8e6;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #4682b4;
+        }
+        .details {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .details p {
+            margin: 8px 0;
+            font-weight: bold;
+        }
+        .details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .details li {
+            margin-bottom: 5px;
+            margin-left: 20px;
+        }
+        .details a {
+            color: #4169e1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .details a:hover {
+            text-decoration: underline;
+        }
+        .section-spacing {
+            margin-top: 20px;
+        }
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: right;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <a href="/">Add Contact</a>
+        <a href="/contacts">Display Contact</a>
+    </div>
+    <h1>Person Details</h1>
+    <div class="details">
+        <p>First Name: <span th:text="${person.firstName}"></span></p>
+        <p>Last Name: <span th:text="${person.lastName}"></span></p>
+        <p>Company: <span th:text="${person.company}"></span></p>
+        <hr style="border-color: #333;">
+        <div class="section-spacing"></div>
+        <p>Landline: <span th:text="${person.landline}"></span></p>
+        <div class="section-spacing"></div>
+        <p>Mobile: <span th:text="${person.mobile}"></span></p>
+        <div class="section-spacing"></div>
+        <p>Email: <span th:text="${person.email}"></span></p>
+        <div class="section-spacing"></div>
+    </div>
+</div>
+</body>
+</html>
